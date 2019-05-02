@@ -1,0 +1,16 @@
+﻿GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Comments](
+	[Comment] [nvarchar](max) NOT NULL,
+	[NewsId] [uniqueidentifier] NOT NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[News](
+	[Newss] [nvarchar](120) NOT NULL,
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
