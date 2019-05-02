@@ -42,25 +42,16 @@ namespace DbUpLesson
     }
       public  void Addcomments()
       { 
-           if (int.TryParse(Console.ReadLine(), out int index))
-           {
-             if (index > 0 && index <= news.Count)
-             {
-               string comment;
-               Guid id = news[index - 1].Id;
                Console.WriteLine("Введите коменттарий");
                comment = Console.ReadLine();
         
                using (var connection = new SqlConnection(connectionString))
                {
                  Comments newscomment = new Comments();
-                 newscomment.NewsId = id;
                  newscomment.Comment = comment;
         
-                 connection.Execute("insert into Comments values(@Comment, @NewsId)", newscomment);
-               }
-             }
-           }   
+                 connection.Execute("insert into Comments values(@Comment)", newscomment);
+               } 
       }
   }
 }
