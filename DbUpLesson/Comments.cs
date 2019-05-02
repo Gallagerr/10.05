@@ -9,6 +9,5 @@ namespace DbUpLesson
   public class Comments : Entity
   {
     public string Comment { get; set; }
-    public Guid NewsId { get; set; }
   }
 }
